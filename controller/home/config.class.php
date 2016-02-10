@@ -5,7 +5,7 @@ use FStudio\fsController as controller;
 /**
  * Description of config
  *
- * @author balem
+ * @author 
  */
 class config extends controller {
 

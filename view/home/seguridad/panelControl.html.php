@@ -1,7 +1,7 @@
 <?php include_once $fsConfig->getPath() . 'view/parcial/head.php' ?>
-<?php include_once $fsConfig->getPath() . 'view/parcial/headerDos.php' ?>
+<?php include_once $fsConfig->getPath() . 'view/parcial/header.php' ?>
 <section class="main container">
-    <div class="row ">
+<!--    <div class="row ">
         <div class="miga-de-pan col-md-12">
             <ol class="breadcrumb">
                 <li class="inicio"><a href="#"></a>Inicio</li>
@@ -9,7 +9,7 @@
             </ol>
         </div>
     </div>
-    <!--Termina Miga De Pan -->
+    Termina Miga De Pan -->
 
     <div class="pan">
         <ul>

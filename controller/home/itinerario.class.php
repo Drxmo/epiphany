@@ -5,7 +5,7 @@ use FStudio\fsController as controller;
 /**
  * Description of itinerario
  *
- * @author balem
+ * @author 
  */
 class itinerario extends controller {
 

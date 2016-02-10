@@ -5,7 +5,7 @@ use FStudio\fsController as controller;
 /**
  * Description of evento
  *
- * @author balem
+ * @author
  */
 class evento extends controller {
 

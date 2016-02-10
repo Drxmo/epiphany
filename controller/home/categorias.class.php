@@ -5,7 +5,7 @@ use FStudio\fsController as controller;
 /**
  * Description of categorias
  *
- * @author balem
+ * @author 
  */
 class categorias extends controller {
 

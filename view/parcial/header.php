@@ -237,6 +237,7 @@
 
                                        <li><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/lista">Identificarse</a></li>
                                  <li role="separator" class="divider"></li>
+                                 
                                          <li><a href="<?php echo $fsConfig->getUrl() ?>index.php/seguridad/registro">Crear cuenta</a></li>
                             <li role="separator" class="divider"></li>
                                        
@@ -264,6 +265,8 @@
                                         <li role="separator" class="divider"></li>
                                         <li><a href="#">Editar Datos</a></li>
                                         <li role="separator" class="divider"></li>
+                                        <li><a href="<?php echo $fsConfig->getUrl() ?>index.php/seguridad/panelControl">Panel de Control</a></li>
+                                 <li role="separator" class="divider"></li>
                                         <li><a href="#">Cambiar contraseña</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li><a href="#">Eliminar cuenta</a></li>
