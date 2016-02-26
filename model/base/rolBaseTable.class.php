@@ -8,7 +8,7 @@ use portalProject\myConfig as config;
 /**
  * Description of rolBaseTable
  *
- * @author balem
+ * @author D
  */
 class rolBaseTable extends model {
 

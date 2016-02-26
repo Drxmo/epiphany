@@ -5,7 +5,7 @@ use portalProject\model\base\rolBaseTable;
 /**
  * Description of rolTable
  *
- * @author balem
+ * @author D
  */
 class rolTable extends rolBaseTable {
 

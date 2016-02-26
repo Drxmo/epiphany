@@ -6,7 +6,7 @@ class eventoTable extends eventoBaseTable {
 
     public function getAll() {
         $conn = $this->getConnection($this->config);
-        $sql = 'SELECT eve_id AS id, cat_id AS categoria_id, est_id AS estado_id, usu_id AS usuario_id, eve_nombre AS nombre, '
+        $sql = 'SELECT eve_id AS id, cat_id AS categoria_id, est_id AS estado_id, usu_id AS usuario_id, eve_nombre AS nombre, eve_descripcion AS descripcion, '
                 . 'eve_fecha_hora AS fecha_hora, eve_correo_contacto AS correo_contacto, eve_direccion AS direccion, '
                 . 'eve_nombre_contacto AS nombre_contacto, eve_telefono_contacto AS telefono_contacto, '
                 . 'eve_valor_boleta AS valor_boleta, eve_latitud AS latitud, '
@@ -22,7 +22,7 @@ class eventoTable extends eventoBaseTable {
 
     public function getById($id = NULL) {
         $conn = $this->getConnection($this->config);
-        $sql = 'SELECT eve_id AS id, cat_id AS categoria_id, est_id AS estado_id, usu_id AS usuario_id, eve_nombre AS nombre, '
+        $sql = 'SELECT eve_id AS id, cat_id AS categoria_id, est_id AS estado_id, usu_id AS usuario_id, eve_nombre AS nombre, eve_descripcion AS descripcion, '
                 . 'eve_fecha_hora AS fecha_hora, eve_correo_contacto AS correo_contacto, eve_direccion AS direccion, '
                 . 'eve_nombre_contacto AS nombre_contacto, eve_telefono_contacto AS telefono_contacto, '
                 . 'eve_valor_boleta AS valor_boleta, eve_latitud AS latitud, '
@@ -41,8 +41,8 @@ class eventoTable extends eventoBaseTable {
 
     public function save() {
         $conn = $this->getConnection($this->config);
-        $sql = 'INSERT INTO usuario '
-                . '(eve_id, cat_id, est_id, usu_id, eve_nombre, eve_fecha_hora, eve_direccion, eve_nombre_contacto, eve_correo_contacto, eve_telefono_contacto, eve_valor_boleta, eve_latitud, eve_longitud, fecha_inicio_publicacion, fecha_fin_publicacion) '
+        $sql = 'INSERT INTO bdp_evento '
+                . '(eve_id, cat_id, est_id, usu_id, eve_nombre, eve_descripcion, eve_fecha_hora, eve_direccion, eve_nombre_contacto, eve_correo_contacto, eve_telefono_contacto, eve_valor_boleta, eve_latitud, eve_longitud, fecha_inicio_publicacion, fecha_fin_publicacion) '
                 . 'VALUES (:id, :categoria_id, :estado_id, :usuario_id, :nombre, :fecha_hora, :direccion, :nombre_contacto, :correo_contacto, :telefono_contacto, :valor_boleta, :latitud, :longitud, :fecha_inicio_publicacion, :fecha_fin_publicacion)';
         $params = array(
             ':id' => $this->getId(),
@@ -50,6 +50,7 @@ class eventoTable extends eventoBaseTable {
             ':estado_id' => $this->getEstado_id(),
             ':usuario_id' => $this->getUsuario_id(),
             ':nombre' => $this->getNombre(),
+            ':descripcion' => $this->getDescripcion(),
             ':fecha_hora' => $this->getFecha_hora(),
             ':direccion' => $this->getDireccion(),
             ':nombre_contacto' => $this->getNombre_contacto(),
@@ -69,11 +70,12 @@ class eventoTable extends eventoBaseTable {
 
     public function update() {
         $conn = $this->getConnection($this->config);
-        $sql = 'UPDATE bd_usuario SET '
+        $sql = 'UPDATE bdp_evento SET '
                 . 'cat_id = :categoria_id, '
                 . 'est_id = :estado_id, '
                 . 'usu_id = :usuario_id, '
                 . 'eve_nombre = :nombre '
+                . 'eve_descripcion = :descripcion '
                 . 'eve_fecha_hora = :fecha_hora, '
                 . 'eve_direccion = :direccion, '
                 . 'eve_nombre_contacto = :nombre_contacto, '
@@ -90,6 +92,7 @@ class eventoTable extends eventoBaseTable {
             ':estado_id' => $this->getEstado_id(),
             ':usuario_id' => $this->getUsuario_id(),
             ':nombre' => $this->getNombre(),
+            ':descripcion' => $this->getDescripcion(),
             ':fecha_hora' => $this->getFecha_hora(),
             ':direccion' => $this->getDireccion(),
             ':nombre_contacto' => $this->getNombre_contacto(),

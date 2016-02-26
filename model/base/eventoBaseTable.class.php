@@ -12,6 +12,8 @@ class eventoBaseTable extends model {
     const CATEGORIA_ID = 'cat_id';
     const NOMBRE = 'eve_nombre';
     const NOMBRE_LENGTH = 80;
+    const DESCRIPCION = 'eve_descripcion';
+    const DESCRIPCION_LENGTH = 400;
     const FECHA_HORA = 'eve_fecha_hora';
     const DIRECCION = 'eve_direccion';
     const DIRECCION_LENGTH = 100;
@@ -166,6 +168,10 @@ class eventoBaseTable extends model {
 
     public function setNombre($nombre) {
         $this->nombre = $nombre;
+    }
+    
+     public function setDescripcion($descripcion) {
+        $this->descripcion = $descripcion;
     }
 
     public function setFechaHora($fecha_hora) {

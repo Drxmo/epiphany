@@ -5,7 +5,7 @@ use portalProject\model\base\imagenBaseTable;
 /**
  * Description of imagenTable
  *
- * @author balem
+ * @author D
  */
 class imagenTable extends imagenBaseTable {
 

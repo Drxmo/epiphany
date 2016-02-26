@@ -5,7 +5,7 @@ use FStudio\model\base\datoUsuarioBaseTable;
 /**
  * Description of datoUsuarioTable
  *
- * @author balem
+ * @author D
  */
 class datoUsuarioTable extends datoUsuarioBaseTable {
 

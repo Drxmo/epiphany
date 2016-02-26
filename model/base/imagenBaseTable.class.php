@@ -8,7 +8,7 @@ use portalProject\myConfig as config;
 /**
  * Description of imagenBaseTable
  *
- * @author balem
+ * @author D
  */
 class imagenBaseTable extends model {
 

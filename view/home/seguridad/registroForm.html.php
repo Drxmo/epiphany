@@ -34,11 +34,26 @@
         <div class="jumbotron boxuser boxuserX">
             <form class="form-horizontal" action="<?php echo $registroForm ?>" method="post">
                 <div class="form-group">
-                    <label class="control-label col-xs-3">Nick:</label>
-                    <div class="col-xs-9">
+                    <label class="control-label col-xs-3">Nombre de Usuario:</label>
+                    <div class="regInput col-xs-9">
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="registro[nick]">
+                        
+                    </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Password:</label>
+                        <div class="regInput col-xs-9">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="registro[pass]">
+                        </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-xs-3">Password:</label>
+                        <div class="regInput col-xs-9">
+                            <input type="password" class="form-control" placeholder="Confirmar Password" name="registro[pass]">
+                        </div>
+                    </div>
+                     <div class="form-group">
                         <label class="control-label col-xs-3">Nombre:</label>
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="registro[nombre]">
@@ -50,18 +65,6 @@
                             <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="registro[apellidos]">
                         </div>
                     </div> 
-                    <div class="form-group">
-                        <label class="control-label col-xs-3">Password:</label>
-                        <div class="col-xs-9">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="registro[pass]">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-3">Password:</label>
-                        <div class="col-xs-9">
-                            <input type="password" class="form-control" placeholder="Confirmar Password" name="registro[pass]">
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label class="control-label col-xs-3">Correo:</label>
                         <div class="col-xs-9">

@@ -37,7 +37,7 @@ class categoriaTable extends categoriaBaseTable {
 
     public function save() {
         $conn = $this->getConnection($this->config);
-        $sql = 'INSERT INTO categoria '
+        $sql = 'INSERT INTO bdp_categoria '
                 . '(cat_id, cat_cat_id, cat_nombre, cat_activo) '
                 . 'VALUES (:id, :categoria_id, :nombre, :activo)';
         $params = array(

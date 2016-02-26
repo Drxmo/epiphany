@@ -8,7 +8,7 @@ use FStudio\myConfig as config;
 /**
  * Description of usuarioBaseTable
  *
- * @author balem
+ * @author D
  */
 class usuarioBaseTable extends model {
 

@@ -220,7 +220,7 @@
                         <li class="contInicioX"><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/index">Inicio <span class="sr-only">(current)</span></a></li>
                         <li class="sitiosX"><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/sitio">Sitios</a></li>
                         <li class="eventosX"><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/evento">Eventos</a></li>
-                        <li class="eventosX"><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/categorias">Categorias</a></li>
+                        <li class="categoriasX"><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/categorias">Categorias</a></li>
 
                     </ul>
                     <div class="floatRightX">

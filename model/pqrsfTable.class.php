@@ -5,7 +5,7 @@ use portalProject\model\base\pqrsfBaseTable;
 /**
  * Description of pqrsfTable
  *
- * @author balem
+ * @author D
  */
 class pqrsfTable extends pqrsfBaseTable {
 

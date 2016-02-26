@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/style.css">
         <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/fonts/style.css">
         <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/estilox.css">
+        <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/styleD.css">
+        <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/styleC.css">
+        <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/estiloCDAP.css">
         <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/new.css">
         
         <link rel="stylesheet" href="<?php echo $fsConfig->getUrl() ?>css/jquery-ui.css">
