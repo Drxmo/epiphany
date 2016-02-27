@@ -39,7 +39,7 @@
             
             
                 <h2>Eventos</h2>
-                <p><a href="#">Crear Evento</a></p> 
+                <p><a href="<?php echo $fsConfig->getUrl() ?>index.php/seguridad/eventoCrear">Crear Evento</a></p> 
                 <p><a href="#">Listar Evento</a></p>
             
         </ul>

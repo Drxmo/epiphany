@@ -34,7 +34,7 @@ class crearSitio extends controller implements action{
             $evento->setEstadoId($eventos['estadoId']);
             $evento->setUsuarioId($eventos['usuId']);
             $evento->setNombre($eventos['nombre']);
-            $evento->setFecha($eventos['nombre']);
+            $evento->setFecha($eventos['fecha_hora']);
             $evento->setDescripcion($eventos['descripcion']);
             $evento->setDireccion($eventos['direccion']);
             $evento->setTelefono($eventos['telefono']);

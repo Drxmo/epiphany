@@ -7,11 +7,11 @@ use FStudio\fsController as controller;
  *
  * @author DRX
  */
-class sitioCrear extends controller {
+class eventoCrear extends controller {
 
     public function execute() {
         
-        $this->defineView('home/seguridad', 'sitioForm', 'html');
+        $this->defineView('home/seguridad', 'eventoForm', 'html');
     }
 
 }
