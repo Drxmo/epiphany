@@ -4,11 +4,10 @@ require_once '../model/base/usuarioBaseTable.class.php';
 require_once '../model/usuarioTable.class.php';
 require_once '../model/base/datoUsuarioBaseTable.class.php';
 require_once '../model/datoUsuarioTable.class.php';
-require_once '../model/base/sitioBaseTable.class.php';
-require_once '../model/sitioTable.class.php';
 require_once '../model/base/categoriaBaseTable.class.php';
 require_once '../model/categoriaTable.class.php';
-
+require_once '../model/base/sitioBaseTable.class.php';
+require_once '../model/sitioTable.class.php';
 
 use FStudio\fsController as controller;
 use FStudio\interfaces\fsAction as action;
