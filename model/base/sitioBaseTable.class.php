@@ -1,6 +1,7 @@
 <?php
 
-namespace portalPoyecto\model\base;
+//namespace portalPoyecto\model\base;
+namespace FStudio\model\base;
 
 use FStudio\fsModel as model;
 use FStudio\myConfig as config;

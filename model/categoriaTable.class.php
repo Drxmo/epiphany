@@ -1,6 +1,6 @@
 <?php
 
-use proyectoPortal\model\base\categoriaBaseTable;
+use FStudio\model\base\categoriaBaseTable;
 
 class categoriaTable extends categoriaBaseTable {
 
@@ -46,10 +46,15 @@ class categoriaTable extends categoriaBaseTable {
             ':nombre' => $this->getNombre(),
             ':activo' => $this->getActivo(),
         );
+//        $answer = $conn->prepare($sql);
+//        $answer->execute($params);
+//        $this->setId($conn->lastInsertId());
+//        return TRUE;
+        
         $answer = $conn->prepare($sql);
         $answer->execute($params);
-        $this->setId($conn->lastInsertId());
-        return TRUE;
+        $this->setId($params[':id']);
+        return true;
     }
 
     public function update() {
@@ -90,4 +95,12 @@ class categoriaTable extends categoriaBaseTable {
         return true;
     }
 
+    public function nextId() {
+        $conn = $this->getConnection($this->config);
+        $sql = 'SELECT IFNULL(MAX(cat_id),0)+1 AS id FROM bdp_categoria ORDER BY id DESC LIMIT 1';
+        $answer = $conn->prepare($sql);
+        $answer->execute();
+        $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+        return $answer[0]->id;
+    }
 }

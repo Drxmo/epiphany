@@ -9,6 +9,13 @@ and open the template in the editor.
 */
 
 /* 
+    !!!! (PANELCONTROL)¡¡¡
+*/
+.tablePanel{
+   transform: translate(400px, -300px);
+}
+
+/*
     !!!!TABLA (PANELCONTROL)¡¡¡
 */
 .tablon{

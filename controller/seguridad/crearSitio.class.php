@@ -6,6 +6,8 @@ require_once '../model/base/datoUsuarioBaseTable.class.php';
 require_once '../model/datoUsuarioTable.class.php';
 require_once '../model/base/sitioBaseTable.class.php';
 require_once '../model/sitioTable.class.php';
+require_once '../model/base/categoriaBaseTable.class.php';
+require_once '../model/categoriaTable.class.php';
 
 
 use FStudio\fsController as controller;
@@ -27,7 +29,9 @@ class crearSitio extends controller implements action{
 //            $registro = filter_input_array(INPUT_POST)['registro'];
 
 //      $this->validateInsert($registro);
-
+$sitios = filter_input_array(INPUT_POST)['sitios'];
+        
+        
             $sitio = new sitioTable($config);
             $sitio->setId($sitio->nextId());
             $sitio->setCategoriaId($sitios['catId']);
@@ -40,13 +44,19 @@ class crearSitio extends controller implements action{
             $sitio->setLatitud($sitios['latitud']);
             $sitio->setLongitud($sitios['longitud']);
             $sitio->setFacebook($sitios['facebook']);
-            $sitio->setLatitud($sitios['twitter']);
-            $sitio->setLatitud($sitios['google_plus']);
-            $sitio->setLatitud($sitios['created_at']);
-            $sitio->setLatitud($sitios['updated_at']);
-            $sitio->setLatitud($sitios['deleted_at']);
-            
+            $sitio->setTwitter($sitios['twitter']);
+            $sitio->setGooglePlus($sitios['google']);
+//            $sitio->setCreatedAt($sitios['created_at']);
+//            $sitio->setUpdatedAt($sitios['updated_at']);
+//            $sitio->setDeletedAt($sitios['deleted_at']);
+//            
             $sitio->save();
+            
+            $categoria = new sitioTable($config);
+            
+            
+            $categoria->save();
+            
 
 //            $datoUsuario = new datoUsuarioTable($config);
 //            $sitio->setUsuarioId($usuario->getId());

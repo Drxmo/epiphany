@@ -515,7 +515,7 @@ figure{
     user-select: none;
 }
 
-pan {
+.pan {
     min-height: 100px;
     display: compact;
     position: relative;

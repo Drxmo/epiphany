@@ -5,48 +5,31 @@
         <ul>
                      
                 
-                <h2>Cuenta</h2>
+            <h2 style="height: 30px; width:300px">Cuenta</h2>
                 <p><a href="evento.html.php">Modificar</a>
                 <p><a href="#">Aqui va algo</a></p>
                 <p><a href="#">Aqui va otro algo</a></p>
                 <p><a href="#">Volver</a></p>
             
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-
-                                        <li><a href="<?php echo $fsConfig->getUrl() ?>index.php/home/categorias">Todas</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Editar Datos</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        
-                                        <li><a href="#">Cambiar contraseña</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Eliminar cuenta</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="<?php echo $logoutURL ?>">Cerrar Sesión</a></li>
-                                        <li role="separator" class="divider"></li>
-                                    </ul>
-                                </li>
+                                
             
             
                 
-                <h2>Sitios</h2>
+                <h2 style="height: 30px; width:300px">Sitios</h2>
                 <a href="<?php echo $fsConfig->getUrl() ?>index.php/seguridad/sitioCrear">Crear Sitio</a>
                     <p><a href="#">Listar Sitio</a></p>
             
             
             
             
-                <h2>Eventos</h2>
+                <h2 style="height: 30px; width:300px">Eventos</h2>
                 <p><a href="<?php echo $fsConfig->getUrl() ?>index.php/seguridad/eventoCrear">Crear Evento</a></p> 
                 <p><a href="#">Listar Evento</a></p>
             
         </ul>
-    </div>
         
-<div class="panel panel-primary">
-  <table class="tablon table-hover table-responsive">      
+        
+  <table class="tablePanel table-hover table-responsive">      
       <tbody>
           <tr class="active">      
               <td></td>
@@ -106,6 +89,11 @@
       </tbody>
   </table>
     </div>
+        
+        
+    
+        
+
 
  
 <?php include_once $fsConfig->getPath() . 'view/parcial/footer.php' ?>

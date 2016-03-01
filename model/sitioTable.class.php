@@ -1,6 +1,7 @@
 <?php
 
-use proyectoPortal\model\base\sitioBaseTable;
+//use proyectoPortal\model\base\
+use FStudio\model\base\sitioBaseTable;
 
 class sitioTable extends sitioBaseTable {
 
@@ -41,11 +42,11 @@ class sitioTable extends sitioBaseTable {
 
     public function save() {
         $conn = $this->getConnection($this->config);
-        $sql = 'INSERT INTO usuario '
-                . '(sit_id, cat_id, est_id, usu_id, sit_nombre, sit_descripcion, sit_direccion, sit_telefono, sit_latitud, sit_longitud, sit_facebook, sit_twitter, sit_google_plus) '
-                . 'VALUES (:id, :categoria_id, :estado_id, :usuario_id, :nombre, :descripcion, :direccion, :telefono, :latitud, :longitud, :facebook, :twitter, :google_plus)';
+        $sql = 'INSERT INTO bdp_sitio '
+                . '(cat_id, est_id, usu_id, sit_nombre, sit_descripcion, sit_direccion, sit_telefono, sit_latitud, sit_longitud, sit_facebook, sit_twitter, sit_google_plus) '
+                . 'VALUES (:categoria_id, :estado_id, :usuario_id, :nombre, :descripcion, :direccion, :telefono, :latitud, :longitud, :facebook, :twitter, :google_plus)';
         $params = array(
-            ':id' => $this->getId(),
+//            ':id' => $this->getId(),
             ':categoria_id' => $this->getCategoriaId(),
             ':estado_id' => $this->getEstadoId(),
             ':usuario_id' => $this->getUsuarioId(),
@@ -59,10 +60,16 @@ class sitioTable extends sitioBaseTable {
             ':twitter' => $this->getTwitter(),
             ':google_plus' => $this->getGooglePlus()
         );
+//        die(print_r($params));
         $answer = $conn->prepare($sql);
         $answer->execute($params);
         $this->setId($conn->lastInsertId());
         return TRUE;
+        
+//         $answer = $conn->prepare($sql);
+//        $answer->execute($params);
+//        $this->setId($params[':id']);
+//        return true;
     }
 
     public function update() {
@@ -119,6 +126,15 @@ class sitioTable extends sitioBaseTable {
         $answer = $conn->prepare($sql);
         $answer->execute($params);
         return true;
+    }
+    
+    public function nextId() {
+        $conn = $this->getConnection($this->config);
+        $sql = 'SELECT IFNULL(MAX(sit_id),0)+1 AS id FROM bdp_sitio ORDER BY id DESC LIMIT 1';
+        $answer = $conn->prepare($sql);
+        $answer->execute();
+        $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+        return $answer[0]->id;
     }
 
 }
